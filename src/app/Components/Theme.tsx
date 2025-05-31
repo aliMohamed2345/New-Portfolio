@@ -32,19 +32,19 @@ const Theme = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="relative w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 dark:bg-gray-800/50 dark:border-gray-700/50 dark:hover:bg-gray-700/50 transition-all duration-300"
+      className="relative w-10 h-10 rounded-full bg-background/10 backdrop-blur-md border border-border/20 hover:bg-accent/20 transition-all duration-300"
     >
       {isDarkMode ? (
         <IoMdSunny
           size={25}
-          className={`${
-            isDarkMode ? `rotate-0 scale-100` : `-rotate-90 scale-0`
-          }`}
+          className={`h-5 w-5 text-primary transition-all duration-300 ${
+            isDarkMode ? `rotate-90 scale-0` : `rotate-0 scale-100` 
+          } ` }
         />
       ) : (
         <IoMdMoon
           size={25}
-          className={`${
+          className={`h-5 w-5 text-primary transition-all duration-300 ${
             isDarkMode ? `rotate-0 scale-100` : `-rotate-90 scale-0`
           }`}
         />

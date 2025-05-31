@@ -5,14 +5,13 @@ import { useState } from "react";
 import Theme from "./Theme";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(setIsOpen);
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20 shadow-sm transition-colors duration-300">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/20 shadow-sm transition-colors duration-300">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link
             href={"/"}
-            className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent"
+            className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
           >
             Ali Mohamed Ali
           </Link>
@@ -20,12 +19,13 @@ const Nav = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
+              <Link
+                href={item.href}
                 key={item.name}
-                className={`text-sm font-medium transition-colors duration-300 hover:text-purple-600 dark:hover:text-purple-400 `}
+                className={`text-sm font-bold transition-colors duration-300 hover:text-primary text-muted-foreground `}
               >
                 {item.name}
-              </button>
+              </Link>
             ))}
             <Theme />
           </div>
@@ -41,6 +41,7 @@ const Nav = () => {
             {/* > */}
             {/* {isOpen ? <X size={24} /> : <Menu size={24} />} */}
             {/* </Button> */}
+            <button onClick={() => setIsOpen(true)}>tabs</button>
           </div>
         </div>
 
