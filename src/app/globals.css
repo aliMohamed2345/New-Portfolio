@@ -92,9 +92,8 @@ html.dark {
 }
 
 body {
-  /* background: var(--color-background); */
+  scroll-behavior: smooth;
   min-height: 100vh;
-  /* color: var(--color-foreground); */
   font-family: Arial, Helvetica, sans-serif;
 }
 

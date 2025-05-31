@@ -23,14 +23,6 @@ const Hero = () => {
     }
   };
 
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById("projects");
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-
   return (
     <section
       id="home"
@@ -99,12 +91,12 @@ const Hero = () => {
           </div>
         </div>
 
-        <button
-          onClick={scrollToProjects}
+        <a
+          href="#projects"
           className="absolute -bottom-[150px] left-1/2 transform -translate-x-1/2 animate-bounce hover:scale-110 transition-transform"
         >
           <FaArrowDown size={32} className="text-purple-400" />
-        </button>
+        </a>
       </div>
     </section>
   );
