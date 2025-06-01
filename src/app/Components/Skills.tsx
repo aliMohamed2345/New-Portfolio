@@ -17,7 +17,7 @@ const Skills = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {SkillsIcons.map((skill, index) => (
             <div
-              className="group relative overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 rounded-lg border bg-card text-card-foreground shadow-sm hover:border-primary/50 h-40"
+              className="group relative overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 rounded-lg border bg-card text-card-foreground shadow-sm hover:border-primary/50 cursor-pointer"
               key={index}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -26,7 +26,9 @@ const Skills = () => {
                   <div className="transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                     {skill.icon}
                   </div>
-                  <h3 className="text-lg font-semibold group-hover:text-primary transition-colors duration-300">{skill.name}</h3>
+                  <h3 className="text-lg font-semibold group-hover:text-primary transition-colors duration-300">
+                    {skill.name}
+                  </h3>
                 </div>
               </div>
             </div>

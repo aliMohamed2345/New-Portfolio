@@ -38,8 +38,8 @@ const Theme = () => {
         <IoMdSunny
           size={25}
           className={`h-5 w-5 text-primary transition-all duration-300 ${
-            isDarkMode ? `rotate-90 scale-0` : `rotate-0 scale-100` 
-          } ` }
+            isDarkMode ? `rotate-90 scale-0` : `rotate-0 scale-100`
+          } `}
         />
       ) : (
         <IoMdMoon

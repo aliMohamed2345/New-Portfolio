@@ -1,4 +1,12 @@
-import { FaCode, FaGlobe, FaMobile, FaDatabase } from "react-icons/fa";
+import {
+  FaCode,
+  FaGlobe,
+  FaMobile,
+  FaDatabase,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import Image from "next/image";
 import { ReactNode } from "react";
 
@@ -188,5 +196,25 @@ export const SkillsIcons: SkillsProps[] = [
         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
       />
     ),
+  },
+];
+
+export const contactInfo = [
+  {
+    icon: <FaEnvelope className="w-6 h-6" />,
+    title: "Email",
+    value: "eloymohamedalimansor@gmail.com",
+    link: "mailto:eloymohamedalimansor@gmail.com",
+  },
+  {
+    icon: <FaPhone className="w-6 h-6" />,
+    title: "Phone",
+    value: "+20 127 892 2209",
+    link: "tel:+20 127 892 2209",
+  },
+  {
+    icon: <FaMapMarkerAlt className="w-6 h-6" />,
+    title: "Location",
+    value: "Cairo, Egypt",
   },
 ];
