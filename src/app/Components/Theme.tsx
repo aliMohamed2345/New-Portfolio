@@ -32,23 +32,37 @@ const Theme = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="relative w-10 h-10 rounded-full bg-background/10 backdrop-blur-md border border-border/20 hover:bg-accent/20 transition-all duration-300"
+      className="relative w-10 h-10 rounded-full bg-background backdrop-blur-md border border-border hover:bg-primary hover:text-primary-foreground transition-all duration-300 overflow-hidden"
     >
-      {isDarkMode ? (
-        <IoMdSunny
-          size={25}
-          className={`h-5 w-5 text-primary transition-all duration-300 ${
-            isDarkMode ? `rotate-90 scale-0` : `rotate-0 scale-100`
-          } `}
-        />
-      ) : (
-        <IoMdMoon
-          size={25}
-          className={`h-5 w-5 text-primary transition-all duration-300 ${
-            isDarkMode ? `rotate-0 scale-100` : `-rotate-90 scale-0`
+      <div className="relative w-full h-full">
+        {/* Sun Icon */}
+        <div
+          className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${
+            isDarkMode
+              ? "opacity-100 rotate-0 scale-100"
+              : "opacity-0 -rotate-90 scale-0"
           }`}
-        />
-      )}
+        >
+          <IoMdSunny
+            size={25}
+            className="text-background-foreground transform transition-transform duration-500"
+          />
+        </div>
+
+        {/* Moon Icon */}
+        <div
+          className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${
+            isDarkMode
+              ? "opacity-0 rotate-90 scale-0"
+              : "opacity-100 rotate-0 scale-100"
+          }`}
+        >
+          <IoMdMoon
+            size={25}
+            className="text-background-foreground transform transition-transform duration-500"
+          />
+        </div>
+      </div>
     </button>
   );
 };

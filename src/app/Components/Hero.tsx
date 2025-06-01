@@ -46,9 +46,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col-reverse sm:flex-row gap-4 justify-center items-center mb-12">
-            <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full transition-all hover:scale-105 shadow-lg">
+            <a 
+            href="#projects"
+            className="bg-primary text-primary-foreground px-8 py-3 rounded-full transition-all hover:bg-accent hover:text-accent-foreground hover:scale-105 shadow-lg">
               View My Work
-            </button>
+            </a>
             <button
               onClick={() =>
                 handleDownloadCV(
@@ -56,7 +58,7 @@ const Hero = () => {
                   `Ali Mohamed Ali Mansor - Front End Developer.pdf`
                 )
               }
-              className="border-border flex items-center gap-2 bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground px-8 py-3 rounded-full transition-all duration-300"
+              className="border-border flex items-center gap-2 bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:scale-105 px-8 py-3 rounded-full transition-all duration-300"
             >
               <FaDownload className="w-4 h-4 mr-2" />
               Download CV
