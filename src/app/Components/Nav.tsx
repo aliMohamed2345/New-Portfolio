@@ -11,7 +11,7 @@ const Nav = () => {
         <div className="flex items-center justify-between h-16">
           <Link
             href={"/"}
-            className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+            className="sm:text-2xl text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
           >
             Ali Mohamed Ali
           </Link>
