@@ -24,6 +24,7 @@ import QuizGame from "../../public/Quiz_Game.jpg";
 import Fzakerr from "../../public/Fzakerr App.jpg";
 import Pixels from "../../public/Pixels.jpg";
 import Movie from "../../public/Movie-App.png";
+import News from '../../public/news-app.jpg'
 
 export interface SkillsProps {
   name: string;
@@ -403,6 +404,16 @@ export const Projects: ProjectsProps[] = [
     Demo: "https://movie-app-three-kohl.vercel.app/movie",
     Github: "https://github.com/aliMohamed2345/Movie-App",
     Image: Movie,
+    Technologies: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Redux"],
+  },
+  {
+    Title: "News-App",
+    Description:
+      "a comprehensive news discovery platform designed to provide users with a seamless and engaging way to explore, browse, and stay updated with the latest news.",
+    Class: "React",
+    Demo: "https://news-app-blush-alpha.vercel.app/",
+    Github: "https://github.com/aliMohamed2345/news-app",
+    Image: News,
     Technologies: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Redux"],
   },
 ];
